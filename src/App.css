@@ -26,9 +26,62 @@ body {
 }
 .typewriter {
   width: 55%;
+  margin-bottom: 25em;
 }
 .typewriter-title {
   font-size: 5em;
   margin: 1.5em 2em;
 }
 
+.article-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.article-card {
+  width: calc(25%-4em);
+  height: 400px;
+  margin: 72px 4em;
+  padding: 2em 3em 9em 3em;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.article-card > img {
+  width: 300px;
+}
+.hero {
+  background-image: url(https://cdn.custom-cursor.com/cursors/stonks_meme_1254.png);
+  background-repeat: no-repeat;
+  background-position-y: -50px;
+  height: 800px;
+  background-size: 100% ;
+}
+.paginator {
+  display: flex;
+  justify-content: center;
+
+}
+.paginator > div {
+  margin: 2em;
+}
+.paginator>div > button {
+  cursor: pointer;
+  padding: .5em 2em;
+  width: 8em;
+  height: 3em;
+  color: #2196f3;
+  border-radius: 16px;
+  font-size: 1.2em;
+  background-color:rgba(0, 0, 0, 0.19)
+  /* border: none; */
+}
+/* .loader {
+} */
+.load-more-articles {
+  text-align: center;
+}
+.error-card {
+  text-align: center;
+}

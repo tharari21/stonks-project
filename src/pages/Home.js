@@ -1,10 +1,14 @@
-import {useState} from 'react';
 import TypeWriter from "../components/TypeWriter";
+import ArticleCards from '../components/ArticleCards';
 const Home = () => {
     return (
       <div>
-        <TypeWriter text={"STONKS IS A REAL TIME STOCK APP!"}/>
-        
+        <section className="hero">
+            <TypeWriter text="STONKS IS A REAL TIME STOCK APP!"/>
+        </section>
+        <section>
+            <ArticleCards />
+        </section>
       </div>
     );
 }

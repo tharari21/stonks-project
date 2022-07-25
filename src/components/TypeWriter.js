@@ -3,6 +3,7 @@ import {useState, useEffect, useRef} from 'react'
 const TypeWriter = ({text}) => {
     const index = useRef(0)
     const [currentText, setCurrentText] = useState('');
+    
 
     // Anytime the text prop changes we want to re-initialize. Seems unnecessary
     // useEffect(() => {
@@ -21,7 +22,7 @@ const TypeWriter = ({text}) => {
                 clearTimeout(timeoutId)
             }
         }
-    }, [currentText])
+    }, [currentText, text])
   return (
     <div className="typewriter">
         <h1 className="typewriter-title">
