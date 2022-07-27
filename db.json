@@ -9,5 +9,22 @@
         {"uuid": 6,"title": "Sample Article 6", "image_url": "https://media.istockphoto.com/photos/the-city-of-dreams-new-york-citys-skyline-at-twilight-picture-id599766748?k=20&m=599766748&s=612x612&w=0&h=lZ8gpCQQifxd0V7zOwFFkFym9bnZ6TBQkWafAHnc-D4=", "snippet": "This is a sample article", "url": ""},
         {"uuid": 7,"title": "Sample Article 7", "image_url": "https://media.istockphoto.com/photos/the-city-of-dreams-new-york-citys-skyline-at-twilight-picture-id599766748?k=20&m=599766748&s=612x612&w=0&h=lZ8gpCQQifxd0V7zOwFFkFym9bnZ6TBQkWafAHnc-D4=", "snippet": "This is a sample article", "url": ""},
         {"uuid": 8,"title": "Sample Article 8", "image_url": "https://media.istockphoto.com/photos/the-city-of-dreams-new-york-citys-skyline-at-twilight-picture-id599766748?k=20&m=599766748&s=612x612&w=0&h=lZ8gpCQQifxd0V7zOwFFkFym9bnZ6TBQkWafAHnc-D4=", "snippet": "This is a sample article", "url": ""}
-    ]}
+    ]},
+    "stocks": {
+        "data": [
+            {"id": 1, "ticker_symbol": "AAPL", "name": "Apple Inc.", "price": 83.24},
+            {"id": 2, "ticker_symbol": "MFST", "name": "Microsoft Inc.", "price": 123.32},
+            {"id": 3, "ticker_symbol": "TSLA", "name": "Tesla Inc.", "price": 493.11},
+            {"id": 4, "ticker_symbol": "AMZ", "name": "Amazon Inc.", "price": 232.43},
+            {"id": 5, "ticker_symbol": "AT&T", "name": "AT&T", "price": 123.44},
+            {"id": 6, "ticker_symbol": "ALI", "name": "Alibaba maybe?", "price": 92.44},
+            {"id": 7, "ticker_symbol": "AAPL", "name": "Apple Inc.", "price": 83.24},
+            {"id": 8, "ticker_symbol": "MFST", "name": "Microsoft Inc.", "price": 123.32},
+            {"id": 9, "ticker_symbol": "TSLA", "name": "Tesla Inc.", "price": 493.11},
+            {"id": 10, "ticker_symbol": "AMZ", "name": "Amazon Inc.", "price": 232.43},
+            {"id": 11, "ticker_symbol": "AT&T", "name": "AT&T Inc.", "price": 123.44},
+            {"id": 12, "ticker_symbol": "ALI", "name": "Alibaba Maybe?", "price": 92.44}
+        ]
+    },
+     "bought_stocks": []
 }

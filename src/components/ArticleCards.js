@@ -11,6 +11,7 @@ const ArticleCards = () => {
 
     // Use this function to get articles each time and set certain states
     const loadArticles = async (pageNum) => {
+      setIsLoading(true);
       // const req = await fetch(
       //   `https://api.marketaux.com/v1/news/all?page=${pageNum}&language=en&api_token=S5vAZQKrYmitgVCr6TXIB4hP7jPlL1Akvi3hZpN0`
       // );
@@ -19,12 +20,11 @@ const ArticleCards = () => {
       const res = await req.json();
       if (res.data) {
         setArticles([...articles, ...res.data])
-        setCurrentPage(previousPage => previousPage + 1)
-
       }
       else {
         setErrors({...res.error, statusCode: req.status})
       }
+      setIsLoading(false);
       return res;
       
     }
@@ -44,9 +44,25 @@ const ArticleCards = () => {
           <ArticleCard key={article.uuid} article={article} />
         ))}
       </div>
-      {errors && <ErrorCard errorMessage={errors.message}/>}
-      {isLoading ? <Loader /> : <button className="load-more-articles-btn">Load More</button> }
-      
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {errors && <ErrorCard errorMessage={errors.message} />}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <button
+            className="load-more-articles-btn"
+            onClick={() => setCurrentPage((previousPage) => previousPage + 1)}
+            disabled={isLoading}
+          >
+            LOAD MORE
+          </button>
+        )}
+      </div>
     </div>
   );
 }

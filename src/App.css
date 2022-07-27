@@ -2,6 +2,9 @@
 body {
   font-family: 'Roboto Mono', monospace;
 }
+* {
+  box-sizing: border-box;
+}
 #header {
   display: flex;
   justify-content: center;
@@ -25,7 +28,7 @@ body {
   border-bottom: 2px solid #2196f3;
 }
 .typewriter {
-  width: 55%;
+  width: 60%;
   margin-bottom: 25em;
 }
 .typewriter-title {
@@ -38,7 +41,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
 }
 .article-card {
   width: calc(25%-4em);
@@ -77,11 +79,153 @@ body {
   background-color:rgba(0, 0, 0, 0.19)
   /* border: none; */
 }
-/* .loader {
-} */
-.load-more-articles {
-  text-align: center;
+
+.loader-container { 
+  display: flex;
+  justify-content: center;
 }
+.load-more-articles-btn {
+  margin: 1em 1em;
+  padding: 1em 1.5em;
+  border-radius: 9px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 1em;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3;
+  /* Light grey */
+  border-top: 10px solid #383636;
+  /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+  margin: auto;
+}
+
 .error-card {
   text-align: center;
+}
+.stock-table-container {
+  display: flex;
+  justify-content: center;
+}
+.stock-table {
+  margin: 4em;
+  width: 70%;
+  /* background-color:rgba(0, 0, 0, 0.7); */
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  
+}
+.stock-table-row {
+  height: 62px;
+  /* color: white; */
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  border-radius: 16px;
+
+}
+.stock-table-col {
+  padding: .2em 4em;
+
+}
+.buy-stock-btn {
+  padding: .3em .6em;
+  width: 8em;
+  height: 3em;
+  border-radius: 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  /* background-color: #2196f3; */
+  background-color: black;
+  color: white;
+}
+/* When a stock is bought it adds this class
+.bought {
+  
+}
+*/
+.buy-stock-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 600px;
+  height: 500px;
+  /* background-color: #2196f3; */
+  background-color: white;
+  box-shadow: 0px 5px 16px rgba(0,0,0,0.2);
+  border-radius: 16px;
+
+}
+.buy-stock-form {
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  margin: 0 2.5em;
+  font-size: 1.2em;
+}
+input[type="number"],input[type="text"] {
+  margin: .8em auto;
+  width: 50%;
+  font-size: 1em;
+  height: 4em;
+  padding: 1em;
+  border: 0;
+  border-bottom: 4px solid rgb(15, 11, 11);
+  border-radius: 10px;
+  box-shadow: -4px 2px 2px 4px rgba(0,0,0,.6)
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: .6em auto;
+  padding: .7em 2em;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+input[type=number]:focus {
+  border-color: #000;
+}
+label {
+  margin: 0 auto;
+}
+.close-modal-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  z-index: 10;
+  font-size: 1.5em;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.make-it-rain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
